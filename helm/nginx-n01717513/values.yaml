@@ -1,6 +1,6 @@
 image:
   repository: docker.io/suryatejasanku/nginx-n01717513
-  tag: "dev"
+  tag: "gh-6"
   pullPolicy: IfNotPresent
 service: { type: NodePort, port: 80 }
 replicaCount: 2
