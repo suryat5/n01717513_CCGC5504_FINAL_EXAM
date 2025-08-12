@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: { name: nginx-n01717513, namespace: argocd }
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/YOUR_GITHUB/n01717513_CCGC5504_FINAL_EXAM.git"
+    targetRevision: main
+    path: helm/nginx-n01717513
+    helm: { releaseName: nginx-n01717513 }
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy: { automated: { prune: true, selfHeal: true } }
