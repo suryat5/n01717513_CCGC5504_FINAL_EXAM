@@ -1,0 +1,6 @@
+apiVersion: v2
+name: nginx-n01717513
+description: Final exam app (n01717513)
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

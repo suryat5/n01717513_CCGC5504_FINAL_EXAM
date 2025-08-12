@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: nginx-n01717513, labels: { app: nginx-n01717513 } }
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector: { matchLabels: { app: nginx-n01717513 } }
+  template:
+    metadata: { labels: { app: nginx-n01717513 } }
+    spec:
+      containers:
+        - name: web
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports: [{containerPort: 80}]

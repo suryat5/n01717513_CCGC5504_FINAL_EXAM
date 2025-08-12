@@ -1,0 +1,7 @@
+image:
+  repository: docker.io/suryatejasanku/nginx-n01717513
+  tag: "dev"
+  pullPolicy: IfNotPresent
+service: { type: NodePort, port: 80 }
+replicaCount: 2
+resources: {}
